@@ -3,6 +3,8 @@
 
 This small project uses the [yt-dlp](https://github.com/yt-dlp/yt-dlp#installation) project on github as the tool to download youtube videos. Furter using [Flask](https://flask.palletsprojects.com/en/2.2.x/), I have created a simple web interface to add videos to a queue and download them. The queue is stored in a [sqlite](https://sqlite.org/index.html) database. One by one the videos are downloaded and stored in the configuered folder. 
 
+*NOTE: The queue is not yet implemented*
+
 ### Installation
 
 ### Reuse / distribution
