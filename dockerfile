@@ -1,9 +1,12 @@
 FROM python:alpine3.17
 
 RUN apk add yt-dlp
-RUN pip install flask
-COPY app.py app.py
+#RUN python3 -m venv /.venv/flask
+#RUN source /.venv/flask/bin/activate
+RUN pip install flask gunicorn
 
-RUN yt-dlp --version
+COPY app /app
 
-CMD python3 -m flask run
+WORKDIR /app
+
+CMD gunicorn -w 1 -b 0.0.0.0 webGUI:app
