@@ -9,4 +9,4 @@ COPY app /app
 
 WORKDIR /app
 
-CMD gunicorn -w 1 -b 0.0.0.0 webGUI:app
+CMD gunicorn -t 0 -w 2 -b 0.0.0.0 webGUI:app
