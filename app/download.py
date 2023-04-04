@@ -3,5 +3,5 @@ import os
 
 def download(url):
     print(subprocess.run(["pwd"]))
-    print(subprocess.run(["ls -l"]))
-    return subprocess.run(["bash download.sh", url])
+    print(subprocess.run(["ls"]))
+    return subprocess.run(["download.sh", url])
